@@ -74,6 +74,8 @@ Method
 
 Use this as a "monorepo", with many Haskell projects, each representing a stage of the experiment.
 
+Estimate: 51 hours
+
 0. Preparation
 --------------
 
