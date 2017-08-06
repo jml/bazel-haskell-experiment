@@ -79,46 +79,46 @@ Use this as a "monorepo", with many Haskell projects, each representing a stage 
 
 Estimate: 0.5 hours
 
-- [ ] create a minimal Haskell executable that depends on a minimal library
-- [ ] build it with ghc, documenting commands used
+- Create a minimal Haskell executable that depends on a minimal library
+- Build it with ghc, documenting commands used
 
 1. Pure, native, dynamic
 ------------------------
 
 Estimate: 1.5 hours
 
-- [ ] build it with Bazel using fyquah95's build rules
-- [ ] build it with Bazel using benley's build rules
-- [ ] set up some way to easily toggle between them
+- Build it with Bazel using fyquah95's build rules
+- Build it with Bazel using benley's build rules
+- Set up some way to easily toggle between them
 
 2. Pure, native, static
 -----------------------
 
 Estimate: 3 hours
 
-- [ ] Try to statically link the minimal executable using ghc
-- [ ] Encode that effort into Bazel rules, somehow
-- [ ] Build statically with Bazel
+- Try to statically link the minimal executable using ghc
+- Encode that effort into Bazel rules, somehow
+- Build statically with Bazel
 
 3. C dependencies, native, dynamic
 ----------------------------------
 
 Estimate: 2 hours
 
-- [ ] Extend the example to depend on a Haskell library that depends on a C library
-      (highlighter2 or cryptonite, perhaps)
-- [ ] Build it with GHC
-- [ ] Build it with Bazel
+- Extend the example to depend on a Haskell library that depends on a C library
+  (highlighter2 or cryptonite, perhaps)
+- Build it with GHC
+- Build it with Bazel
 
 4. C dependencies, native, static
 ---------------------------------
 
 Estimate: 3 hours
 
-- [ ] Statically link that using GHC
-      (this will probably require static versions of the dependent libraries)
-- [ ] Encode that into Bazel rules
-- [ ] Statically link with Bazel
+- Statically link that using GHC
+  (this will probably require static versions of the dependent libraries)
+- Encode that into Bazel rules
+- Statically link with Bazel
 
 5. Publish
 ----------
@@ -128,64 +128,64 @@ Estimate: 4 hours
 If we get to this point, we'll have something interesting to other people.
 It's unclear exactly how best to communicate, but some options are:
 
-- [ ] update `compare-revisions`_ CI process to use Bazel
-- [ ] write and publish a blog post, focusing on results
-- [ ] update `servant-template`_ to use Bazel (possibly controversial),
-      or at least whatever static linking techniques we discover
-- [ ] post to /r/haskell
-- [ ] Tweet to @bazelbuild about it
+- Update `compare-revisions`_ CI process to use Bazel
+- Write and publish a blog post, focusing on results
+- Update `servant-template`_ to use Bazel (possibly controversial),
+  or at least whatever static linking techniques we discover
+- Post to /r/haskell
+- Tweet to @bazelbuild about it
 
 6. Explore cross compiling
 --------------------------
 
 Estimate: 6 hours
 
-- [ ] Follow the official GHC instructions to set up a cross-compiling GHC for macOS to Linux
-- [ ] Use that GHC to cross-compile minimal binary
-- [ ] Try to use the LLVM backend with a normal GHC to target linux amd64 from macOS
-- [ ] Try Go cross compilation (perhaps on Cortex_?)
-- [ ] Read up on how Go cross compilation works
-- [ ] Update stack & ghc bugs with details
+- Follow the official GHC instructions to set up a cross-compiling GHC for macOS to Linux
+- Use that GHC to cross-compile minimal binary
+- Try to use the LLVM backend with a normal GHC to target linux amd64 from macOS
+- Try Go cross compilation (perhaps on Cortex_?)
+- Read up on how Go cross compilation works
+- Update stack & ghc bugs with details
 
 7. Pure, cross-compiled, dynamic
 --------------------------------
 
 Estimate: 4 hours
 
-- [ ] Compile a dynamic Linux executable from my MacBook using Bazel
-- [ ] Run it in a Docker image
+- Compile a dynamic Linux executable from my MacBook using Bazel
+- Run it in a Docker image
 
 8. Pure, cross-compiled, static
 -------------------------------
 
 Estimate: 4 hours
 
-- [ ] Compile a static Linux executable from my MacBook using Bazel
-- [ ] Compile it into a Docker image
-      (technically out of scope, but generally useful, somewhat related, and hopefully not too hard)
+- Compile a static Linux executable from my MacBook using Bazel
+- Compile it into a Docker image
+  (technically out of scope, but generally useful, somewhat related, and hopefully not too hard)
 
 9. C dependencies, cross-compiled, dynamic
 ------------------------------------------
 
 Estimate: 4 hours
 
-- [ ] Take the existing minimal example with C dependencies and compile it for Linux using Bazel
+- Take the existing minimal example with C dependencies and compile it for Linux using Bazel
 
 10. C dependencies, cross-compiled, static
 ------------------------------------------
 
 Estimate: 4 hours
 
-- [ ] Take the existing minimal example with C dependencies and compile it for Linux using Bazel
-      making sure the resulting executable is statically linked
+- Take the existing minimal example with C dependencies and compile it for Linux using Bazel
+  making sure the resulting executable is statically linked
 
 11. Review
 ----------
 
 Estimate: 3 hours
 
-* can we factor out what we've learned into clean, re-usable Bazel rules?
-* how would someone who had never used Bazel begin to use such a system?
+* Can we factor out what we've learned into clean, re-usable Bazel rules?
+* How would someone who had never used Bazel begin to use such a system?
 
 12. Publish
 -----------
@@ -194,25 +194,26 @@ Estimate: 4 hours
 
 Again, details are unclear, but options include:
 
-- [ ] update `compare-revisions`_ core Makefile to use Bazel
-- [ ] write and publish a results-oriented blog post
-- [ ] write and publish a process-oriented blog post
-- [ ] update `servant-template`_
-- [ ] post to /r/haskell
-- [ ] post to Bazel mailing list
+- Update `compare-revisions`_ core Makefile to use Bazel
+- Write and publish a results-oriented blog post
+- Write and publish a process-oriented blog post
+- Update `servant-template`_
+- Post to /r/haskell
+- Post to Bazel mailing list
 
 13. Profit
 ----------
 
 Estimate: 8 hours
 
-- [ ] Write rules for running Haskell tests
-- [ ] Write rules for running Haskell benchmarks
-- [ ] migrate all my projects to bazel
-  - [ ] difftodo (and then, release!)
-  - [ ] holborn
-  - [ ] graphql-api
-  - [ ] haskell-spake2
+- Write rules for running Haskell tests
+- Write rules for running Haskell benchmarks
+- Migrate all my projects to bazel
+
+  - difftodo (and then, release!)
+  - holborn
+  - graphql-api
+  - haskell-spake2
 
 Prior art
 =========
