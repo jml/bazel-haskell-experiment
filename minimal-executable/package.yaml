@@ -1,0 +1,26 @@
+name: bazel-haskell-experiment
+version: 0.0.1
+synopsis: Minimal executable with library for experimenting with Bazel
+description: Please see README.md
+maintainer: Jonathan M. Lange <jml@mumak.net>
+license: Apache
+github: jml/bazel-haskell-experiment
+
+ghc-options: -Wall
+default-extensions:
+  - NoImplicitPrelude
+  - OverloadedStrings
+
+dependencies:
+  - base >= 4.9 && < 5
+  - protolude
+
+executables:
+  minimal-executable:
+    main: Main.hs
+    source-dirs: cmd
+    dependencies:
+      - bazel-haskell-experiment
+
+library:
+  source-dirs: src
