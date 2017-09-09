@@ -330,6 +330,12 @@ Stack appears to be a glorified cabal wrapper. This is what it runs on ``stack b
                 --ghc-options " -ddump-hi -ddump-to-file"
 
 
+Auto-format Bazel files with `buildifier <https://github.com/bazelbuild/buildtools>`_:
+
+.. code-block:: console
+
+   $ buildifier -showlog -mode=fix $(find . \( -name '*.bzl' -o -name '*.BUILD' -o -name 'WORKSPACE' -o -name 'BUILD' \) -type f)
+
 
 References
 ==========
