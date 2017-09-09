@@ -11,7 +11,7 @@ hs_library(
 hs_binary(
     name = "minimal-executable",
     srcs = [
-        "cmd/Main.hs"
+        "cmd/Main.hs",
     ],
     deps = [
         ":bazel-haskell-experiment",
