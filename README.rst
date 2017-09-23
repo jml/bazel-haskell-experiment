@@ -1,8 +1,8 @@
+This has been migrated to `rules_haskell <https://github.com/jml/rules_haskell>`_
+
 ========================
 Bazel Haskell experiment
 ========================
-
-This has been migrated to `rules_haskell <https://github.com/jml/rules_haskell>`_
 
 I want to build Haskell projects with Bazel_.
 This repository contains a set of minimal experiments for doing so.
